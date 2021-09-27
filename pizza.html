@@ -1,0 +1,92 @@
+<html>
+<head>pizza</head>
+<script>
+function validate(){
+var name=document.myform.name.value;
+var address=document.myform.address.value;
+var contactno=document.myform.contactno.value;
+if(name==null || name==""){
+alert("name shouldn't be blank");
+document.myform.fname.focus();
+return false;
+}
+else if(address==null || address==""){
+alert("adress shouldn't be blank");
+
+return false;
+}
+else if(contactno==null || contactno==""){
+alert("please enter mobile no");
+return false;
+}
+}
+</script>
+<body background="D:\Etg/dna.jpg">
+<form name="myform" action="display">
+name:<input type="text" name="lname"><br></br>
+Address:<input type="text"name="address"><br></br>
+pincode:<input type="text"name="pincode"><br></br>
+contactno:<input type="text" name="contactno"><br></br>
+<label>sizeofpizza</label><br></br>
+<input type="checkbox"name="sizeofpizza"value="Small"/>Small
+<input type="checkbox"name="sizeofpizza"value="Medium"/>Medium
+<input type="checkbox"name="sizeofpizza"value="Large"/>Large<br></br>
+<label for="Toppings on pizza">Do you like to have toppings:</label><br></br>
+<select name ="Toppings on pizza"id="please select">
+<option value="select" selected>select</option><br></br>
+<option value="cheese"id="1">cheese</option><br></br>
+<option value="Bellpeper"id="2">Bellpeper</option>
+<option value="paneer"id="3">paneer</option>
+<option value="olive"id="4">olive</option>
+<option value="red cherries">Red cherries</option><br></br>
+</select><br></br>
+ <div class="form-check">
+    <label for="chooseToppings"><em>Choose your Toppings:</em></label><br>
+    <input class="check-input" type="radio" value="Cheese" name="toppingCheck">
+    <label class="check-label" for="cheese">
+cheese (200Rs)
+    </label>
+    </div>
+    <div class="form-check">
+    <input class="check-input" type="radio" name="Toppings on pizza" id="1" value="paneer">
+    <label class="check-label" for="paneer">
+	paner (350Rs)
+    </label>
+    </div>
+    <div class="form-check">
+    <input class="check-input" type="radio" name="Toppings on pizza" id="3" value="Bellpeper">
+    <label class="check-label" for="Bellpeper">
+	Bellpeper (300Rs)
+    </label>
+    </div>
+    <div class="form-check">
+    <input class="check-input" type="radio" name="Toppings on pizza" id="2" value="olive">
+    <label class="check-label" for="olive">
+	olive (400Rs)
+    </label>
+    </div>
+    <div class="form-check">
+    <input class="check-input" type="radio" name="Toppings on pizza" id="4" value="Redcherries">
+    <label class="check-label" for="Redcherries">
+	Redcherries(200rs)
+	</label>
+	</div><br></br>
+price:<input type="text" name="price" /><br></br>
+<div class="cost">
+    <div id="show-Bill">
+    <div class="panel panel-default">
+    <div class="panel-body">
+    <p><strong>You final bill is...</strong></p>
+    <p>Name: <span id="display name"></span></p>
+    <p>Toppings: <span id="display Toppings on pizza"></span></p>
+    <p>Size: <span id="display Sizeofpizza"></span></p>
+    <p>Total cost: <span id="displayTotalCost"></span></p>
+    </div>
+    <div class=>Thank You for the Order !!!</div>
+    </div>
+    </div>
+    </div>
+<button type="button" onclick="validate()"id="mybutton">submit</button>
+</form>
+</body>
+</html>
